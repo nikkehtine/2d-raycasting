@@ -8,15 +8,14 @@ extends Node2D
 @onready var line = $Line2D
 
 func _ready() -> void:
-	if line:
-		line.width = width
-		line.default_color = stroke
-		line.points = [start_point, end_point]
-	else:
-		print("ERR: Line2D node not found")
+	line.width = width
+	line.default_color = stroke
+	line.points = [start_point, end_point]
 
-func set_props(start: Vector2, end: Vector2, color: Color = Color.BLACK, thickness: float = 2.0) -> void:
-	start_point = start
-	end_point = end
+func set_props(color: Color, thickness: float) -> void:
 	stroke = color
 	width = thickness
+
+func set_points(start: Vector2, end: Vector2) -> void:
+	start_point = start
+	end_point = end
