@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy116w7gpv8c6"]
+
+[ext_resource type="Script" path="res://Actors/Boundary.gd" id="1_2tun8"]
+
+[node name="Boundary" type="Node2D"]
+script = ExtResource("1_2tun8")
+
+[node name="Line2D" type="Line2D" parent="."]
